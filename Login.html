@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="de">                                                                <!-- Dokumenttyp und Spracheinstellung (Deutsch) -->
+
+<head>
+    <meta charset="UTF-8">                                                      <!-- Zeichensatz für Umlaute etc. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">      <!-- Sorgt dafür, dass die Seite auf allen Geräten (Handy, Tablet, PC) gut skaliert -->
+    <title>Manavanilla</title>                                                  <!-- Titel des Browser-Tabs -->
+    <link rel="stylesheet" href="styles.css">                                   <!-- Verknüpft die CSS-Datei -->
+</head>
+
+
+
+<style>
+
+    *{
+        margin: 0;                                                              /* Kein äußerer Abstand */
+        padding: 0;                                                             /* Kein innerer Abstand */
+        box-sizing: border-box;                                                 /* Macht Breiten-/Höhenberechnung einfacher */
+    }
+
+    .banner{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #FFE8AE;                                            /* Ändert die Hintergrundfarbe des Containers */
+        margin: 5px 5px 0 5px;                                                  /* Erzeugt eine Umrandung um den Container von X pixeln */
+        width: calc(100% - 10px);
+        height: 200px;
+        color: #8E6C00;
+        font-family: sans-serif;
+    }
+
+    
+    .column{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+    }
+
+    .line1{
+        font-size: 64px;                                                        /* Verändert die Schriftgröße von ManaVanilla */
+        margin-bottom: 2px;
+    }
+
+    .line2{
+        font-size: 16px;                                                        /* Verändert die Schriftgröße von Mach dir die Welt lecker */
+        margin-bottom: 16px;
+    }
+
+  .Titelbild{                                                                   /* Container vom Bild */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 5px 0 5px;
+    
+  }
+
+  .Titelbild img{                                                               /*Eigenschaften vom Bild, das im Vontainer .Titelbild ist */
+    max-width: 100%;
+    height: auto;
+    opacity: 1.0;                                                               /* Ändert die Transparenz des Bildes Bildes 10%=0.1 */
+  }
+
+  
+  .navbar{                                                                      /* Ordnet alle <a>-Elemente nebeneinander */
+    height: 40px;
+    display: flex;                                                              /* Elemente richten sich horizontal aus */
+    justify-content: space-between;                                             /* Verteilt den verfügbaren Platz gleichmäßig zwischen den Links */
+    align-items: center;                                                        /* Elemente werden mittig in Bar ausgerichtet */
+    padding: 10px 400px;                                                        /* Fügt 10px Abstand oben/unten und 400px links/rechts ein */
+    margin: 5px 5px 0 5px;                                                      /* Erzeugt eine Umrandung um den Container von X pixeln */
+    background-color: #FFE8AE;                                                /* Ändert die Hintergrundfarbe des Containers */
+  }
+
+  .navbar a{                                                                    /* verändet die Schrift */
+    color: #8E6C00;                                                           /* Ändert die Textfarbe */                                                         
+    text-decoration: none;                                                      /* Entfernt den unterstrich */
+    font-size: 16px;                                                            /* Ändert die Textgröße */
+    padding: 8px 12px;                                                          /* Gibt jedem Link etwas "Innenraum" für Klick-Fläche */
+    transition: background-color 0.9s ease;                                     /* Animiert die Hintergrundfarbe beim Hovern weich */
+  }
+
+  .navbar a:hover{                                                              /* Verändert die Eigenschaften, wenn man mit der Maus über ein Link-Feld geht */
+    background-color:#E6D19D;                                                 /* hintergrundfarbe des Textfeldes verändert sich entsprechend Farbwahl */
+    border-radius: 4px;                                                         /* rundet die Ecken vom Textfeld ab */
+  }
+
+  .site-footer{
+    background-color:#FFE8AE;
+    color:#8E6C00;
+    padding: 30px 20px;
+    font-size: 14px;
+    margin: 5px 5px 5px 5px;
+  }
+
+  .footer-content{
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;                                                    /*sorgt dafür, dass alle Überschriften auf einer horizontalen ebene liegen*/
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px 400px;
+    margin-bottom: 50px;
+  }
+
+  .footer-section{
+    flex: 1;                                                                    
+    text-align: center;
+  }
+
+  .footer-section h3{
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .footer-section a {
+    color:#8E6C00;
+    text-decoration: none;
+  }
+
+  .footer-section a:hover{
+    text-decoration: underline;
+  }
+
+  .footer-section ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-logo{
+    text-align: center;
+    margin: 20px 0;
+    
+  }
+
+  .footer-logo img{
+    height: 50px;
+    max-width: 100%;
+  }
+
+  .footer-bottom{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color:#8E6C00;
+    width: 100%;
+    flex: none;
+    margin-bottom:  -20px;
+  }
+    
+
+
+</style>
+
+<body>
+
+    <div class="banner">                                                        <!-- Erstellt den fabigen balken -->
+        <div class="column">
+            <div class="line1">ManaVanilla</div>
+            <div class="line2">Mach dir die Welt lecker</div>
+        </div>
+    </div>                                                                      <!-- Schloeßendes div von <div class="banner"> (Z.21)  -->
+
+    <div class="Titelbild">
+        <img src="Vanille.jpg" alt="Vanille">
+    </div>
+
+    <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="Ueberuns.html">Über uns</a>
+        <a href="Produkte.html">Produke</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="Login.html">Login</a>
+    </nav>
+
+    <h1>HIER KOMMT DER INHALT VOM LOGIN HIN</h1>
+       
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Kontakt</h3>
+          <p>ManaVanilla</p>
+            <p>Siedlerweg 22/2</p>
+            <p>Ravensburg</p>
+            <p>017643468134</p>
+            <p>E-Mail: Info@ManaVanilla.com</p>
+        </div>
+      
+
+        <div class="footer-section">
+          <h3>Rechtliches</h3>
+            <p><a href="impressum.html">Impressum</a></p>
+            <p><a href="Datenschutz.html">Datenschutz</a></p>
+            <p><a href="AGB.html">AGB</a></p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Folge uns</h3>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy;2005 ManaVanilla. Alle Rechte vorbehalten</p>
+      </div>
+
+      <div class="footer-logo">
+        <img src="LOGO.png" alt="Vanille" />
+      </div>
+
+    </footer>
+
+</body>
+
+</html>
