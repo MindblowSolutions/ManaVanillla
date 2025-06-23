@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">                                                      <!-- Zeichensatz für Umlaute etc. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">      <!-- Sorgt dafür, dass die Seite auf allen Geräten (Handy, Tablet, PC) gut skaliert -->
-    <title>Manavanilla</title>                                                  <!-- Titel des Browser-Tabs -->
-    <link rel="stylesheet" href="styles.css">                                   <!-- Verknüpft die CSS-Datei -->
+    <title>ManaVanilla</title>                                                  <!-- Titel des Browser-Tabs -->
+    <link rel="stylesheet" href="styles-index.css">                             <!-- Verknüpft die CSS-Datei -->
 </head>
 
 
@@ -268,6 +268,97 @@
     flex: none;
     margin-bottom:  -20px;
   }
+
+  @media (max-width: 600px) {
+  
+  .banner {
+    height: auto;                                           /* Höhe flexibel für kleinere Displays */
+    text-align: center;                                     /* Text wird zentriert */
+    padding: 20px;
+  }
+
+  .line1 {
+    font-size: 32px;                                        /* Kleinere Überschrift für Handy */
+  }
+
+  .line2 {
+    font-size: 14px;
+  }
+
+  .navbar {
+    flex-direction: column;                                /* Navigation untereinander statt nebeneinander */
+    align-items: center;
+    padding: 10px;                                          /* Weniger horizontaler Abstand */
+    gap: 5px;                                               /* Abstand zwischen Links */
+  }
+
+  .home-text {
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+    text-align: center;
+  }
+
+  .lineb1 {
+    font-size: 24px;
+  }
+
+  .lineb2, .lineb3 {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .shopcontainer {
+    width: 100%;                                            /* Button breiter für kleinere Screens */
+    padding: 0 10px;
+  }
+
+  .shopbutton a {
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .bild-container {
+    flex-direction: column;                                /* Bilder untereinander statt nebeneinander */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .bild-container img {
+    width: 90%;
+    height: auto;                                           /* Flexible Bildhöhe */
+  }
+
+  .einführungstext .text {
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .linee1, .linee2, .linee3, .linee4 {
+    font-size: 14px;
+  }
+
+  .footer-content {
+    flex-direction: column;                                /* Footer-Bereiche untereinander */
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-bottom {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+
+  .footer-logo img {
+    height: 40px;                                           /* Logo etwas kleiner auf Mobile */
+  }
+}
     
 
 
